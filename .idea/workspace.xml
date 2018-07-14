@@ -1,0 +1,990 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="14f65522-b6e9-454b-814b-423616c269f0" name="Default" comment="Code after first lesson">
+      <change afterPath="$PROJECT_DIR$/.idea/MY-SHOP.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jsLinters/jshint.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vagrant.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop/backend/web/.htaccess" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop/common/entities/InstantiateTrait.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop/common/runtime/cache/5b/5b8da9aaa22cccf895e756b6edfeaef4.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop/common/runtime/cache/7d/7db072f30fa142c47d7b7eecf935d80b.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop/common/runtime/cache/80/80da0d36b93ffe5ac6f6d2c8a59b2bbb.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop/common/runtime/cache/ea/ea6a25f36e3c413e7d1641180399fde8.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop/frontend/services/Auth/PasswordResetService.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop/frontend/services/Auth/SignupService.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop/frontend/web/.htaccess" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/phpcs/OpenCart/IDE/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/phpcs/OpenCart/IDE/opencart_phpstorm.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/phpcs/OpenCart/Sniffs/Spacing/ConcatenationSniff.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/phpcs/OpenCart/Sniffs/Spacing/OpenBracketSpacingSniff.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/phpcs/OpenCart/Sniffs/Variables/ValidVariableNameSniff.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/phpcs/OpenCart/ruleset.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/phpmd/phpmd.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/phpunit/bootstrap-dist.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/phpunit/composer.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/phpunit/opencart/admin/controller/extension/ModificationTest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/phpunit/opencart/catalog/controller/checkout/CartTest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/phpunit/opencart/catalog/model/account/ActivityTest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/phpunit/opencart/catalog/model/account/AddressTest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/phpunit/opencart/catalog/model/account/CustomerGroupTest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/phpunit/opencart/catalog/model/account/CustomerTest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/phpunit/opencart/catalog/model/account/DownloadTest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/phpunit/opencart/catalog/model/account/OrderTest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/phpunit/opencart/catalog/model/catalog/CategoryTest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/phpunit/opencart/catalog/model/catalog/InformationTest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/phpunit/opencart/catalog/model/catalog/ManufacturerTest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/phpunit/opencart/catalog/model/catalog/ProductTest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/phpunit/opencart/catalog/model/catalog/ReviewTest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/phpunit/opencart/catalog/model/checkout/OrderTest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/phpunit/opencart/system/engine/EventTest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/phpunit/opencart/system/library/CurrencyTest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/phpunit/opencart/system/library/UrlTest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/phpunit/selenium/catalog/AccountTest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/phpunit/selenium/catalog/CategoryTest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/phpunit/selenium/catalog/CheckoutTest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/phpunit/selenium/catalog/PayPalExpressTest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/phpunit/selenium/catalog/ProductTest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/phpunit/selenium/catalog/SagePayDirectTest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/phpunit/selenium/openbay/SetupTest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/readme.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/setup/config.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/setup/install.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/shop/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop/backend/config/main.php" beforeDir="false" afterPath="$PROJECT_DIR$/shop/backend/config/main.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop/backend/config/uralManager.php" beforeDir="false" afterPath="$PROJECT_DIR$/shop/backend/config/uralManager.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop/backend/controllers/SiteController.php" beforeDir="false" afterPath="$PROJECT_DIR$/shop/backend/controllers/SiteController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop/backend/views/site/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/shop/backend/views/site/login.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop/common/bootstrap/SetUp.php" beforeDir="false" afterPath="$PROJECT_DIR$/shop/common/bootstrap/SetUp.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop/common/config/main.php" beforeDir="false" afterPath="$PROJECT_DIR$/shop/common/config/main.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop/common/config/test.php" beforeDir="false" afterPath="$PROJECT_DIR$/shop/common/config/test.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop/common/fixtures/UserFixture.php" beforeDir="false" afterPath="$PROJECT_DIR$/shop/common/fixtures/UserFixture.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop/common/mail/passwordResetToken-html.php" beforeDir="false" afterPath="$PROJECT_DIR$/shop/common/mail/passwordResetToken-html.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop/common/mail/passwordResetToken-text.php" beforeDir="false" afterPath="$PROJECT_DIR$/shop/common/mail/passwordResetToken-text.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop/common/models/LoginForm.php" beforeDir="false" afterPath="$PROJECT_DIR$/shop/common/forms/LoginForm.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop/common/models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/shop/common/entities/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop/common/tests/unit/models/LoginFormTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/shop/common/tests/unit/models/LoginFormTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop/frontend/config/main.php" beforeDir="false" afterPath="$PROJECT_DIR$/shop/frontend/config/main.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop/frontend/config/uralManager.php" beforeDir="false" afterPath="$PROJECT_DIR$/shop/frontend/config/uralManager.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop/frontend/controllers/SiteController.php" beforeDir="false" afterPath="$PROJECT_DIR$/shop/frontend/controllers/SiteController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop/frontend/models/ContactForm.php" beforeDir="false" afterPath="$PROJECT_DIR$/shop/frontend/forms/ContactForm.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop/frontend/models/PasswordResetRequestForm.php" beforeDir="false" afterPath="$PROJECT_DIR$/shop/frontend/forms/PasswordResetRequestForm.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop/frontend/models/ResetPasswordForm.php" beforeDir="false" afterPath="$PROJECT_DIR$/shop/frontend/forms/ResetPasswordForm.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop/frontend/models/SignupForm.php" beforeDir="false" afterPath="$PROJECT_DIR$/shop/frontend/forms/SignupForm.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop/frontend/tests/functional/SignupCest.php" beforeDir="false" afterPath="$PROJECT_DIR$/shop/frontend/tests/functional/SignupCest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop/frontend/tests/unit/models/ContactFormTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/shop/frontend/tests/unit/forms/ContactFormTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop/frontend/tests/unit/models/PasswordResetRequestFormTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/shop/frontend/tests/unit/forms/PasswordResetRequestFormTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop/frontend/tests/unit/models/ResetPasswordFormTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/shop/frontend/tests/unit/forms/ResetPasswordFormTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop/frontend/tests/unit/models/SignupFormTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/shop/frontend/tests/unit/forms/SignupFormTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop/frontend/views/site/contact.php" beforeDir="false" afterPath="$PROJECT_DIR$/shop/frontend/views/site/contact.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop/frontend/views/site/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/shop/frontend/views/site/login.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop/frontend/views/site/requestPasswordResetToken.php" beforeDir="false" afterPath="$PROJECT_DIR$/shop/frontend/views/site/requestPasswordResetToken.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop/frontend/views/site/resetPassword.php" beforeDir="false" afterPath="$PROJECT_DIR$/shop/frontend/views/site/resetPassword.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop/frontend/views/site/signup.php" beforeDir="false" afterPath="$PROJECT_DIR$/shop/frontend/views/site/signup.php" afterDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ChangesViewManager" show_ignored="true" />
+  <component name="ComposerSettings" doNotAsk="true" executionDataType="PHAR" phpInterpreterId="bf0f0d2e-a33f-4c56-a558-048511a5cd46" synchronizationState="DONT_SYNCHRONIZE">
+    <pharConfigPath>$PROJECT_DIR$/shop/composer.json</pharConfigPath>
+    <pharPath>F:\OSPanel\modules\php\PHP-7.1\composer.phar</pharPath>
+  </component>
+  <component name="CoverageDataManager">
+    <SUITE FILE_PATH="coverage/MY_SHOP$Codecept.xml" NAME="Codecept Coverage Results" MODIFIED="1530698721130" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="PhpCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="MY-SHOP" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
+      <file leaf-file-name="User.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/shop/common/entities/User.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="418">
+              <caret line="38" column="32" selection-start-line="38" selection-start-column="32" selection-end-line="38" selection-end-column="32" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SetUp.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/shop/common/bootstrap/SetUp.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="132">
+              <caret line="6" column="8" selection-start-line="6" selection-start-column="8" selection-end-line="6" selection-end-column="8" />
+              <folding>
+                <element signature="e#35#83#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PasswordResetService.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/shop/frontend/services/Auth/PasswordResetService.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-197">
+              <caret line="29" column="21" lean-forward="true" selection-start-line="29" selection-start-column="21" selection-end-line="29" selection-end-column="21" />
+              <folding>
+                <element signature="e#124#132#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SiteController.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/shop/frontend/controllers/SiteController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="265">
+              <caret line="217" column="9" lean-forward="true" selection-start-line="217" selection-start-column="9" selection-end-line="217" selection-end-column="9" />
+              <folding>
+                <element signature="e#39#87#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="main.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/shop/backend/config/main.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="330">
+              <caret line="15" column="10" selection-start-line="12" selection-start-column="4" selection-end-line="15" selection-end-column="10" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>7.0</find>
+      <find>cookieValidationKey</find>
+      <find>migr</find>
+      <find>forms</find>
+      <find>models</find>
+      <find>new U</find>
+      <find>\$user\-\&gt;username \= \$this\-\&gt;username\;\n\/\/        \$user\-\&gt;email \= \$this\-\&gt;email\;\n\/\/        \$user\-\&gt;setPassword\(\$this\-\&gt;password\)\;\n\/\/        \$user\-\&gt;generateAuthKey\(\)\;</find>
+      <find>User</find>
+      <find>sendEmail</find>
+      <find>eset</find>
+    </findStrings>
+    <replaceStrings>
+      <replace>7.1</replace>
+      <replace>entities</replace>
+      <replace>forms</replace>
+      <replace />
+    </replaceStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="PREVIOUS_COMMIT_AUTHORS">
+      <list>
+        <option value="Serge Pr" />
+      </list>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/shop/backend/web/index.php" />
+        <option value="$PROJECT_DIR$/shop/vagrant/config/vagrant-local.yml" />
+        <option value="$PROJECT_DIR$/shop/vagrant/config/vagrant-local.example.yml" />
+        <option value="$PROJECT_DIR$/shop/Vagrantfile" />
+        <option value="$PROJECT_DIR$/shop/vagrant/provision/once-as-root.sh" />
+        <option value="$PROJECT_DIR$/shop/vagrant/nginx/app.conf" />
+        <option value="$PROJECT_DIR$/shop/vagrant/provision/always-as-root.sh" />
+        <option value="$PROJECT_DIR$/shop/composer.json" />
+        <option value="$PROJECT_DIR$/shop/environments/dev/common/config/params-local.php" />
+        <option value="$PROJECT_DIR$/shop/environments/index.php" />
+        <option value="$PROJECT_DIR$/shop/common/config/main-local.php" />
+        <option value="$PROJECT_DIR$/shop/frontend/config/main-local.php" />
+        <option value="$PROJECT_DIR$/shop/backend/config/main-local.php" />
+        <option value="$PROJECT_DIR$/shop/common/config/params-local.php" />
+        <option value="$PROJECT_DIR$/shop/console/config/main.php" />
+        <option value="$PROJECT_DIR$/shop/common/config/params.php" />
+        <option value="$PROJECT_DIR$/shop/backend/config/uralManager.php" />
+        <option value="$PROJECT_DIR$/shop/frontend/config/uralManager.php" />
+        <option value="$PROJECT_DIR$/shop/backend/views/layouts/main.php" />
+        <option value="$PROJECT_DIR$/shop/backend/controllers/SiteController.php" />
+        <option value="$PROJECT_DIR$/shop/backend/views/site/login.php" />
+        <option value="$PROJECT_DIR$/shop/common/config/test-local.php" />
+        <option value="$PROJECT_DIR$/shop/common/config/main.php" />
+        <option value="$PROJECT_DIR$/shop/frontend/forms/ContactForm.php" />
+        <option value="$PROJECT_DIR$/shop/common/forms/LoginForm.php" />
+        <option value="$PROJECT_DIR$/shop/frontend/tests/unit/forms/SignupFormTest.php" />
+        <option value="$PROJECT_DIR$/shop/common/entities/InstantiateTrait.php" />
+        <option value="$PROJECT_DIR$/shop/common/tests/unit/entities/User/SignupTest.php" />
+        <option value="$PROJECT_DIR$/shop/common/tests/unit/entities/User/SignupByNetworkTest.php" />
+        <option value="$PROJECT_DIR$/shop/common/tests/unit/entities/User/RequestSignupTest.php" />
+        <option value="$PROJECT_DIR$/shop/common/tests/unit/entities/User/ConfirmSignupTest.php" />
+        <option value="$PROJECT_DIR$/shop/common/tests/unit/forms/LoginFormTest.php" />
+        <option value="$PROJECT_DIR$/shop/services/Auth/SignupService.php" />
+        <option value="$PROJECT_DIR$/shop/frontend/forms/SignupForm.php" />
+        <option value="$PROJECT_DIR$/shop/frontend/services/Auth/SignupService.php" />
+        <option value="$PROJECT_DIR$/shop/frontend/forms/PasswordResetRequestForm.php" />
+        <option value="$PROJECT_DIR$/shop/frontend/forms/ResetPasswordForm.php" />
+        <option value="$PROJECT_DIR$/shop/frontend/frontend/services/Auth/PasswordResetService.php" />
+        <option value="$PROJECT_DIR$/shop/common/entities/User.php" />
+        <option value="$PROJECT_DIR$/shop/backend/config/main.php" />
+        <option value="$PROJECT_DIR$/shop/frontend/config/main.php" />
+        <option value="$PROJECT_DIR$/shop/common/bootstrap/SetUp.php" />
+        <option value="$PROJECT_DIR$/shop/frontend/services/Auth/PasswordResetService.php" />
+        <option value="$PROJECT_DIR$/shop/frontend/controllers/SiteController.php" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="NodePackageJsonFileManager">
+    <packageJsonPaths>
+      <path value="$PROJECT_DIR$/shop/frontend/web/assets/f1b99291/package.json" />
+    </packageJsonPaths>
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP 7.1">
+    <include_path>
+      <path value="$PROJECT_DIR$/shop/vendor/theseer/tokenizer" />
+      <path value="$PROJECT_DIR$/shop/vendor/behat/gherkin" />
+      <path value="$PROJECT_DIR$/shop/vendor/webmozart/assert" />
+      <path value="$PROJECT_DIR$/shop/vendor/fzaninotto/faker" />
+      <path value="$PROJECT_DIR$/shop/vendor/myclabs/deep-copy" />
+      <path value="$PROJECT_DIR$/shop/vendor/swiftmailer/swiftmailer" />
+      <path value="$PROJECT_DIR$/shop/vendor/symfony/yaml" />
+      <path value="$PROJECT_DIR$/shop/vendor/phpunit/phpunit" />
+      <path value="$PROJECT_DIR$/shop/vendor/symfony/finder" />
+      <path value="$PROJECT_DIR$/shop/vendor/phpunit/php-code-coverage" />
+      <path value="$PROJECT_DIR$/shop/vendor/symfony/dom-crawler" />
+      <path value="$PROJECT_DIR$/shop/vendor/phpunit/phpunit-mock-objects" />
+      <path value="$PROJECT_DIR$/shop/vendor/symfony/browser-kit" />
+      <path value="$PROJECT_DIR$/shop/vendor/phpunit/php-token-stream" />
+      <path value="$PROJECT_DIR$/shop/vendor/symfony/polyfill-mbstring" />
+      <path value="$PROJECT_DIR$/shop/vendor/phpunit/php-text-template" />
+      <path value="$PROJECT_DIR$/shop/vendor/symfony/polyfill-ctype" />
+      <path value="$PROJECT_DIR$/shop/vendor/phpunit/php-timer" />
+      <path value="$PROJECT_DIR$/shop/vendor/symfony/event-dispatcher" />
+      <path value="$PROJECT_DIR$/shop/vendor/sebastian/version" />
+      <path value="$PROJECT_DIR$/shop/vendor/phpunit/php-file-iterator" />
+      <path value="$PROJECT_DIR$/shop/vendor/symfony/css-selector" />
+      <path value="$PROJECT_DIR$/shop/vendor/sebastian/diff" />
+      <path value="$PROJECT_DIR$/shop/vendor/cebe/markdown" />
+      <path value="$PROJECT_DIR$/shop/vendor/symfony/console" />
+      <path value="$PROJECT_DIR$/shop/vendor/sebastian/code-unit-reverse-lookup" />
+      <path value="$PROJECT_DIR$/shop/vendor/sebastian/resource-operations" />
+      <path value="$PROJECT_DIR$/shop/vendor/sebastian/object-reflector" />
+      <path value="$PROJECT_DIR$/shop/vendor/sebastian/object-enumerator" />
+      <path value="$PROJECT_DIR$/shop/vendor/phpspec/prophecy" />
+      <path value="$PROJECT_DIR$/shop/vendor/sebastian/recursion-context" />
+      <path value="$PROJECT_DIR$/shop/vendor/phpspec/php-diff" />
+      <path value="$PROJECT_DIR$/shop/vendor/sebastian/exporter" />
+      <path value="$PROJECT_DIR$/shop/vendor/sebastian/environment" />
+      <path value="$PROJECT_DIR$/shop/vendor/sebastian/comparator" />
+      <path value="$PROJECT_DIR$/shop/vendor/guzzlehttp/psr7" />
+      <path value="$PROJECT_DIR$/shop/vendor/codeception/phpunit-wrapper" />
+      <path value="$PROJECT_DIR$/shop/vendor/phpdocumentor/reflection-docblock" />
+      <path value="$PROJECT_DIR$/shop/vendor/sebastian/global-state" />
+      <path value="$PROJECT_DIR$/shop/vendor/codeception/stub" />
+      <path value="$PROJECT_DIR$/shop/vendor/phpdocumentor/type-resolver" />
+      <path value="$PROJECT_DIR$/shop/vendor/codeception/verify" />
+      <path value="$PROJECT_DIR$/shop/vendor/phpdocumentor/reflection-common" />
+      <path value="$PROJECT_DIR$/shop/vendor/codeception/base" />
+      <path value="$PROJECT_DIR$/shop/vendor/psr/http-message" />
+      <path value="$PROJECT_DIR$/shop/vendor/ezyang/htmlpurifier" />
+      <path value="$PROJECT_DIR$/shop/vendor/phar-io/version" />
+      <path value="$PROJECT_DIR$/shop/vendor/doctrine/lexer" />
+      <path value="$PROJECT_DIR$/shop/vendor/phar-io/manifest" />
+      <path value="$PROJECT_DIR$/shop/vendor/doctrine/instantiator" />
+      <path value="$PROJECT_DIR$/shop/vendor/composer" />
+      <path value="$PROJECT_DIR$/shop/vendor/yiisoft/yii2-swiftmailer" />
+      <path value="$PROJECT_DIR$/shop/vendor/yiisoft/yii2-gii" />
+      <path value="$PROJECT_DIR$/shop/vendor/yiisoft/yii2-debug" />
+      <path value="$PROJECT_DIR$/shop/vendor/bower-asset/typeahead.js" />
+      <path value="$PROJECT_DIR$/shop/vendor/yiisoft/yii2-composer" />
+      <path value="$PROJECT_DIR$/shop/vendor/bower-asset/punycode" />
+      <path value="$PROJECT_DIR$/shop/vendor/yiisoft/yii2-faker" />
+      <path value="$PROJECT_DIR$/shop/vendor/bower-asset/yii2-pjax" />
+      <path value="$PROJECT_DIR$/shop/vendor/yiisoft/yii2-bootstrap" />
+      <path value="$PROJECT_DIR$/shop/vendor/bower-asset/bootstrap" />
+      <path value="$PROJECT_DIR$/shop/vendor/yiisoft/yii2" />
+      <path value="$PROJECT_DIR$/shop/vendor/bower-asset/jquery" />
+      <path value="$PROJECT_DIR$/shop/vendor/bower-asset/inputmask" />
+      <path value="$PROJECT_DIR$/shop/vendor/egulias/email-validator" />
+      <path value="$PROJECT_DIR$/shop/vendor/almasaeed2010/adminlte" />
+      <path value="$PROJECT_DIR$/shop/vendor/fortawesome/font-awesome" />
+      <path value="$PROJECT_DIR$/shop/vendor/rmrevin/yii2-fontawesome" />
+      <path value="$PROJECT_DIR$/shop/vendor/dmstr/yii2-adminlte-asset" />
+      <path value="$PROJECT_DIR$/shop/vendor/cebe/yii2-gravatar" />
+    </include_path>
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="596" />
+    <option name="y" value="88" />
+    <option name="width" value="1285" />
+    <option name="height" value="900" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="MY-SHOP" type="b2602c69:ProjectViewProjectNode" />
+              <item name="MY-SHOP" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="MY-SHOP" type="b2602c69:ProjectViewProjectNode" />
+              <item name="MY-SHOP" type="462c0819:PsiDirectoryNode" />
+              <item name="shop" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="MY-SHOP" type="b2602c69:ProjectViewProjectNode" />
+              <item name="MY-SHOP" type="462c0819:PsiDirectoryNode" />
+              <item name="shop" type="462c0819:PsiDirectoryNode" />
+              <item name="common" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="MY-SHOP" type="b2602c69:ProjectViewProjectNode" />
+              <item name="MY-SHOP" type="462c0819:PsiDirectoryNode" />
+              <item name="shop" type="462c0819:PsiDirectoryNode" />
+              <item name="common" type="462c0819:PsiDirectoryNode" />
+              <item name="config" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="MY-SHOP" type="b2602c69:ProjectViewProjectNode" />
+              <item name="MY-SHOP" type="462c0819:PsiDirectoryNode" />
+              <item name="shop" type="462c0819:PsiDirectoryNode" />
+              <item name="frontend" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="MY-SHOP" type="b2602c69:ProjectViewProjectNode" />
+              <item name="MY-SHOP" type="462c0819:PsiDirectoryNode" />
+              <item name="shop" type="462c0819:PsiDirectoryNode" />
+              <item name="frontend" type="462c0819:PsiDirectoryNode" />
+              <item name="controllers" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="MY-SHOP" type="b2602c69:ProjectViewProjectNode" />
+              <item name="MY-SHOP" type="462c0819:PsiDirectoryNode" />
+              <item name="shop" type="462c0819:PsiDirectoryNode" />
+              <item name="frontend" type="462c0819:PsiDirectoryNode" />
+              <item name="services" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="MY-SHOP" type="b2602c69:ProjectViewProjectNode" />
+              <item name="MY-SHOP" type="462c0819:PsiDirectoryNode" />
+              <item name="shop" type="462c0819:PsiDirectoryNode" />
+              <item name="frontend" type="462c0819:PsiDirectoryNode" />
+              <item name="services" type="462c0819:PsiDirectoryNode" />
+              <item name="Auth" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="MY-SHOP" type="b2602c69:ProjectViewProjectNode" />
+              <item name="MY-SHOP" type="462c0819:PsiDirectoryNode" />
+              <item name="tests" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="SearchEverywhereHistoryKey" value="terminal&#9;ACTION&#9;ActivateTerminalToolWindow" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="com.intellij.database.dataSource.DataSourceTemplate" value="MySQL" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/shop/common/codeception.yml" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="settings.github" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="F:\OSPanel\domains\MY-SHOP\shop\backend\views\site" />
+      <recent name="F:\OSPanel\domains\MY-SHOP\shop\backend\views\layouts" />
+      <recent name="F:\OSPanel\domains\MY-SHOP\shop\frontend\config" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="F:\OSPanel\domains\MY-SHOP\shop\frontend\services\Auth" />
+      <recent name="F:\OSPanel\domains\MY-SHOP\shop\frontend" />
+      <recent name="F:\OSPanel\domains\MY-SHOP\shop\frontend\forms" />
+      <recent name="F:\OSPanel\domains\MY-SHOP\shop\common\entities" />
+      <recent name="F:\OSPanel\domains\MY-SHOP\shop\common\forms" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="CodeceptionConfigurationType" factoryName="Codeception">
+      <PhpTestRunnerSettings configuration_file="$PROJECT_DIR$/shop/codeception.yml" directory="$PROJECT_DIR$/shop/vendor/codeception/base/codecept" file="$PROJECT_DIR$/shop/vendor/codeception/base/codecept" method="" scope="File" use_alternative_configuration_file="true" />
+    </configuration>
+    <configuration name="common" type="CodeceptionConfigurationType" factoryName="Codeception">
+      <PhpTestRunnerSettings configuration_file="$PROJECT_DIR$/shop/common/codeception.yml" directory="$PROJECT_DIR$/shop/vendor/codeception/base/codecept" file="$PROJECT_DIR$/shop/vendor/codeception/base/codecept" method="" scope="Type" selected_type="unit" use_alternative_configuration_file="true" />
+    </configuration>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="14f65522-b6e9-454b-814b-423616c269f0" name="Default" comment="" />
+      <created>1530202574427</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1530202574427</updated>
+      <workItem from="1530202580448" duration="1444000" />
+      <workItem from="1530205943774" duration="15929000" />
+      <workItem from="1530353276474" duration="2708000" />
+      <workItem from="1530366164951" duration="10539000" />
+      <workItem from="1530602328221" duration="9014000" />
+      <workItem from="1530695998107" duration="14320000" />
+      <workItem from="1530726308478" duration="12362000" />
+      <workItem from="1530773590447" duration="7213000" />
+      <workItem from="1530805058938" duration="1434000" />
+      <workItem from="1530868170205" duration="11960000" />
+      <workItem from="1531087611246" duration="667000" />
+      <workItem from="1531089176820" duration="40439000" />
+      <workItem from="1531345793161" duration="34196000" />
+    </task>
+    <task id="LOCAL-00001" summary="Code after first lesson">
+      <created>1530980724415</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1530980724415</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
+    <servers />
+  </component>
+  <component name="TestHistory">
+    <history-entry file="Codecept - 2018.07.04 at 13h 05m 23s.xml">
+      <configuration name="Codecept" configurationId="CodeceptionConfigurationType" />
+    </history-entry>
+    <history-entry file="Codecept - 2018.07.04 at 13h 05m 57s.xml">
+      <configuration name="Codecept" configurationId="CodeceptionConfigurationType" />
+    </history-entry>
+    <history-entry file="common - 2018.07.04 at 13h 21m 53s.xml">
+      <configuration name="common" configurationId="CodeceptionConfigurationType" />
+    </history-entry>
+    <history-entry file="common - 2018.07.04 at 13h 33m 00s.xml">
+      <configuration name="common" configurationId="CodeceptionConfigurationType" />
+    </history-entry>
+    <history-entry file="common - 2018.07.04 at 13h 48m 07s.xml">
+      <configuration name="common" configurationId="CodeceptionConfigurationType" />
+    </history-entry>
+    <history-entry file="common - 2018.07.04 at 13h 49m 43s.xml">
+      <configuration name="common" configurationId="CodeceptionConfigurationType" />
+    </history-entry>
+    <history-entry file="common - 2018.07.04 at 15h 11m 06s.xml">
+      <configuration name="common" configurationId="CodeceptionConfigurationType" />
+    </history-entry>
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="162225000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="596" y="88" width="1285" height="900" extended-state="0" />
+    <editor active="true" />
+    <layout>
+      <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.49905002" weight="0.32914925" />
+      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.50348324" side_tool="true" weight="0.32914925" />
+      <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="7" sideWeight="0.4965168" weight="0.32914925" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.36300418" />
+      <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.49968335" weight="0.5006974" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4979253" weight="0.2230047" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="right" id="Database" order="3" weight="0.3296617" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32914925" />
+      <window_info id="Structure" order="1" sideWeight="0.5020747" side_tool="true" weight="0.29189613" />
+      <window_info id="Favorites" order="2" sideWeight="0.5020747" side_tool="true" weight="0.29189613" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.3991655" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="bottom" id="Messages" order="7" sideWeight="0.49841672" weight="0.32914925" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="right" id="Coverage" order="3" side_tool="true" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="UnknownFeatures">
+    <option featureType="com.intellij.fileTypeFactory" implementationName="*.bat" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="RECENTLY_FILTERED_USER_GROUPS">
+                <collection />
+              </option>
+              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+                <collection />
+              </option>
+              <option name="COLUMN_ORDER">
+                <list>
+                  <option value="0" />
+                  <option value="1" />
+                  <option value="2" />
+                  <option value="3" />
+                </list>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Code after first lesson" />
+    <option name="LAST_COMMIT_MESSAGE" value="Code after first lesson" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <option name="time" value="1" />
+    </breakpoint-manager>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/shop/console/migrations/m130524_201442_init.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="25">
+          <caret line="4" column="34" selection-start-line="4" selection-start-column="34" selection-end-line="4" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/shop/common/config/bootstrap.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/shop/common/config/params.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="175">
+          <caret line="7" column="39" selection-start-line="7" selection-start-column="39" selection-end-line="7" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/shop/common/config/params-local.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="3" column="35" selection-start-line="3" selection-start-column="35" selection-end-line="3" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/shop/backend/config/bootstrap.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/shop/backend/config/main-local.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="308">
+          <caret line="14" column="35" lean-forward="true" selection-start-line="14" selection-start-column="35" selection-end-line="14" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/shop/backend/config/params.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/shop/backend/config/params-local.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/shop/frontend/forms/ContactForm.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="4" column="4" lean-forward="true" selection-start-line="4" selection-start-column="4" selection-end-line="4" selection-end-column="4" />
+          <folding>
+            <element signature="e#35#43#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/shop/frontend/tests/unit/forms/PasswordResetRequestFormTest.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/shop/frontend/tests/unit/forms/SignupFormTest.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="32" column="23" selection-start-line="32" selection-start-column="23" selection-end-line="32" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/shop/frontend/tests/_data/user.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/shop/common/config/main-local.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="175">
+          <caret line="7" column="29" lean-forward="true" selection-start-line="7" selection-start-column="29" selection-end-line="7" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/shop/vendor/yiisoft/yii2/web/IdentityInterface.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="338">
+          <caret line="55" column="2" selection-start-line="55" selection-start-column="2" selection-end-line="55" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/shop/common/entities/InstantiateTrait.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="675">
+          <caret line="32" column="1" selection-start-line="32" selection-start-column="1" selection-end-line="32" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/shop/common/tests/unit/entities/User/SignupByNetworkTest.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="125">
+          <caret line="5" column="20" selection-start-line="5" selection-start-column="20" selection-end-line="5" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/shop/common/tests/unit/entities/User/RequestSignupTest.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="125">
+          <caret line="5" column="20" selection-start-line="5" selection-start-column="20" selection-end-line="5" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/shop/common/tests/unit/entities/User/ConfirmSignupTest.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="125">
+          <caret line="5" column="20" selection-start-line="5" selection-start-column="20" selection-end-line="5" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/shop/common/tests/unit/entities/Shop/Brand/CreateTest.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="4" column="15" selection-start-line="4" selection-start-column="4" selection-end-line="4" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/shop/common/tests/unit/entities/Shop/Brand/EditTest.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="4" column="4" lean-forward="true" selection-start-line="4" selection-start-column="4" selection-end-line="4" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/shop/common/tests/unit/entities/Shop/Category/CreateTest.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="4" column="4" lean-forward="true" selection-start-line="4" selection-start-column="4" selection-end-line="4" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/shop/common/tests/unit/entities/Shop/Characteristic/CreateTest.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="4" column="4" lean-forward="true" selection-start-line="4" selection-start-column="4" selection-end-line="4" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/shop/common/tests/unit/forms/LoginFormTest.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="125">
+          <caret line="5" column="10" selection-start-line="5" selection-start-column="10" selection-end-line="5" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/shop/common/tests/unit/forms/ContactFormTest.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/shop/common/tests/unit/forms/PasswordResetRequestFormTest.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="4" column="4" lean-forward="true" selection-start-line="4" selection-start-column="4" selection-end-line="4" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/shop/common/forms/LoginForm.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="875">
+          <caret line="37" column="6" selection-start-line="37" selection-start-column="6" selection-end-line="37" selection-end-column="6" />
+          <folding>
+            <element signature="e#31#39#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../yii2-demo-shop-master/shop/entities/User/User.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="500">
+          <caret line="164" column="5" lean-forward="true" selection-start-line="161" selection-start-column="3" selection-end-line="164" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/shop/vendor/yiisoft/yii2/web/Session.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="967">
+          <caret line="788" column="20" selection-start-line="788" selection-start-column="20" selection-end-line="788" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/shop/vendor/yiisoft/yii2/base/Controller.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="9375">
+          <caret line="382" column="5" lean-forward="true" selection-start-line="382" selection-start-column="5" selection-end-line="382" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/shop/vendor/yiisoft/yii2/BaseYii.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1">
+          <caret line="341" column="27" selection-start-line="341" selection-start-column="27" selection-end-line="341" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/stubs/Core/Core.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="212">
+          <caret line="349" column="9" selection-start-line="349" selection-start-column="9" selection-end-line="349" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/shop/vendor/yiisoft/yii2/base/BaseObject.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="276">
+          <caret line="85" column="22" lean-forward="true" selection-start-line="85" selection-start-column="22" selection-end-line="85" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/shop/vendor/yiisoft/yii2/db/ActiveRecord.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="358" column="52" selection-start-line="358" selection-start-column="52" selection-end-line="358" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/shop/vendor/yiisoft/yii2/db/Query.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="292">
+          <caret line="794" column="20" selection-start-line="794" selection-start-column="20" selection-end-line="794" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/shop/vendor/phpunit/phpunit/src/Framework/Constraint/IsEqual.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1300">
+          <caret line="55" column="20" selection-start-line="55" selection-start-column="20" selection-end-line="55" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/shop/vendor/phpunit/phpunit/src/Framework/Assert.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="301">
+          <caret line="603" column="20" selection-start-line="603" selection-start-column="20" selection-end-line="603" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/shop/common/tests/unit/entities/User/SignupTest.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="400">
+          <caret line="22" column="24" lean-forward="true" selection-start-line="22" selection-start-column="24" selection-end-line="22" selection-end-column="24" />
+          <folding>
+            <element signature="e#49#75#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/shop/frontend/forms/ResetPasswordForm.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-9">
+          <caret line="43" column="7" selection-start-line="43" selection-start-column="7" selection-end-line="43" selection-end-column="7" />
+          <folding>
+            <element signature="e#33#52#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/shop/vendor/yiisoft/yii2/web/Request.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="347">
+          <caret line="606" column="20" selection-start-line="606" selection-start-column="20" selection-end-line="606" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/shop/vendor/yiisoft/yii2/base/Model.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="647">
+          <caret line="343" column="20" selection-start-line="343" selection-start-column="20" selection-end-line="343" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/shop/frontend/services/Auth/SignupService.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-9">
+          <caret line="17" column="28" selection-start-line="17" selection-start-column="28" selection-end-line="17" selection-end-column="28" />
+          <folding>
+            <element signature="e#41#66#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/shop/frontend/forms/PasswordResetRequestForm.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-9">
+          <caret line="38" column="10" selection-start-line="38" selection-start-column="10" selection-end-line="38" selection-end-column="10" />
+          <folding>
+            <element signature="e#33#41#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/shop/vendor/yiisoft/yii2/Yii.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="308">
+          <caret line="18" column="6" selection-start-line="18" selection-start-column="6" selection-end-line="18" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/shop/common/entities/User.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="418">
+          <caret line="38" column="32" selection-start-line="38" selection-start-column="32" selection-end-line="38" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/shop/frontend/config/main.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="242">
+          <caret line="14" column="6" selection-start-line="14" selection-start-column="6" selection-end-line="14" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/shop/common/config/main.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="308">
+          <caret line="14" column="35" selection-start-line="14" selection-start-column="35" selection-end-line="14" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/shop/frontend/forms/SignupForm.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-9">
+          <caret line="24" column="11" selection-start-line="24" selection-start-column="11" selection-end-line="24" selection-end-column="11" />
+          <folding>
+            <element signature="e#33#52#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/shop/backend/config/main.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="15" column="10" selection-start-line="12" selection-start-column="4" selection-end-line="15" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/shop/common/bootstrap/SetUp.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="6" column="8" selection-start-line="6" selection-start-column="8" selection-end-line="6" selection-end-column="8" />
+          <folding>
+            <element signature="e#35#83#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/shop/frontend/services/Auth/PasswordResetService.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-197">
+          <caret line="29" column="21" lean-forward="true" selection-start-line="29" selection-start-column="21" selection-end-line="29" selection-end-column="21" />
+          <folding>
+            <element signature="e#124#132#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/shop/frontend/controllers/SiteController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="265">
+          <caret line="217" column="9" lean-forward="true" selection-start-line="217" selection-start-column="9" selection-end-line="217" selection-end-column="9" />
+          <folding>
+            <element signature="e#39#87#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ScopeChooserConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>
