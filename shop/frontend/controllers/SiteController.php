@@ -1,21 +1,22 @@
 <?php
 namespace frontend\controllers;
 
-use frontend\services\Auth\PasswordResetService;
-use frontend\services\Auth\SignupService;
-use frontend\services\Contact\ContactService;
-use common\repositories\UserRepository;
+use shop\services\Auth\PasswordResetService;
+use shop\services\Auth\SignupService;
+use shop\services\Contact\ContactService;
+use shop\repositories\UserRepository;
+use shop\services\Auth\AuthService;
 use Yii;
 use yii\base\InvalidParamException;
 use yii\web\BadRequestHttpException;
 use yii\web\Controller;
 use yii\filters\VerbFilter;
 use yii\filters\AccessControl;
-use common\forms\LoginForm;
-use frontend\forms\PasswordResetRequestForm;
-use frontend\forms\ResetPasswordForm;
-use frontend\forms\SignupForm;
-use frontend\forms\ContactForm;
+use shop\forms\LoginForm;
+use shop\forms\PasswordResetRequestForm;
+use shop\forms\ResetPasswordForm;
+use shop\forms\SignupForm;
+use shop\forms\ContactForm;
 
 /**
  * Site controller
@@ -25,6 +26,7 @@ class SiteController extends Controller
     private $passwordResetService;
     private $contactService;
     private $signupService;
+    private $authService;
 
     public function __construct(
         $id,
@@ -32,12 +34,14 @@ class SiteController extends Controller
         PasswordResetService $passwordResetService,
         ContactService $contactService,
         SignupService $signupService,
+        AuthService $authService,
         $config = [])
     {
         parent::__construct($id, $module, $config);
         $this->passwordResetService = $passwordResetService;
         $this->contactService = $contactService;
         $this->signupService = $signupService;
+        $this->authService = $authService;
     }
     //=========
     public function behaviors()
@@ -104,17 +108,19 @@ class SiteController extends Controller
         if (!Yii::$app->user->isGuest) {
             return $this->goHome();
         }
-
-        $model = new LoginForm();
-        if ($model->load(Yii::$app->request->post()) && $model->login()) {
-            return $this->goBack();
-        } else {
-            $model->password = '';
-
-            return $this->render('login', [
-                'model' => $model,
-            ]);
+        $form = new LoginForm();
+        if ($form->load(Yii::$app->request->post()) && $form->validate()) {
+            try {
+                $user = $this->authService->auth($form);
+                Yii::$app->user->login($user, $form->rememberMe ? 3600 * 24 * 30 : 0);
+                return $this->goBack();
+            } catch (\DomainException $e) {
+                Yii::$app->session->setFlash('error', $e->getMessage());
+            }
         }
+        return $this->render('login', [
+            'model' => $form,
+        ]);
     }
 
     /**
