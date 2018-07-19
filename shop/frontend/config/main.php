@@ -27,6 +27,7 @@ return [
                 'httpOnly' => true,
                 'domain'=>$params['cookieDomain']
             ],
+            'loginUrl' => ['auth/auth/login'],
 
         ],
         'session' => [
@@ -61,8 +62,8 @@ return [
             ],
         ],
 
-        'backendUrlManager'=> require __DIR__ . '/../../backend/config/uralManager.php',
-        'frontendUrlManager' => require __DIR__ . '/uralManager.php',
+        'backendUrlManager'=> require __DIR__ . '/../../backend/config/urlManager.php',
+        'frontendUrlManager' => require __DIR__ . '/urlManager.php',
         'urlManager' => function (){
             return Yii::$app->get('frontendUrlManager');
         },

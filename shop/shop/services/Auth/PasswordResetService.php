@@ -9,8 +9,8 @@
 namespace shop\services\Auth;
 
 use Yii;
-use shop\forms\PasswordResetRequestForm;
-use shop\forms\ResetPasswordForm;
+use shop\forms\auth\PasswordResetRequestForm;
+use shop\forms\auth\ResetPasswordForm;
 use shop\repositories\UserRepository;
 use shop\entities\User;
 use yii\mail\MailerInterface;
@@ -36,7 +36,7 @@ class PasswordResetService
         $sent=Yii::$app
             ->mailer
             ->compose(
-                ['html' => 'passwordResetToken-html', 'text' => 'passwordResetToken-text'],
+                ['html' => 'auth/reset/confirm-html', 'text' => 'auth/reset/confirm-text'],
                 ['user' => $user]
             )
             ->setTo($user->email)

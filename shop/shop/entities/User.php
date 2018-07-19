@@ -56,7 +56,7 @@ class User extends ActiveRecord implements IdentityInterface
     /**
      * {@new}
      */
-    private function is_Wait()
+    public function is_Wait()
     {
         return $this->status === self::STATUS_WAIT;
     }

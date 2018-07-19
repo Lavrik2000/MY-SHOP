@@ -61,8 +61,8 @@ return [
                 ],
             ],
         ],
-        'frontendUrlManager'=> require __DIR__ . '/../../frontend/config/uralManager.php',
-        'backendUrlManager' => require __DIR__ . '/uralManager.php',
+        'frontendUrlManager'=> require __DIR__ . '/../../frontend/config/urlManager.php',
+        'backendUrlManager' => require __DIR__ . '/urlManager.php',
         'urlManager' => function (){
                 return Yii::$app->get('backendUrlManager');
         },

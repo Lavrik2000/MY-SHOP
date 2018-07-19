@@ -6,9 +6,11 @@ return [
         'user' => [
             'class' => 'yii\web\User',
             'identityClass' => 'shop\entities\User',
+
         ],
         'request' => [
             'cookieValidationKey' => 'test',
         ],
+
     ],
 ];
