@@ -8,7 +8,7 @@
 
 namespace shop\services\Auth;
 
-use shop\entities\User;
+use shop\entities\User\User;
 use shop\forms\auth\LoginForm;
 use shop\repositories\UserRepository;
 
