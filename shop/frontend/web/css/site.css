@@ -118,3 +118,6 @@ a.desc:after {
 .nav > li > form > button.logout:focus {
     outline: none;
 }
+.auth-clients {
+    padding: 0 0 20px 0;
+}

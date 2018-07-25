@@ -6,6 +6,8 @@ use yii\base\NotSupportedException;
 use yii\behaviors\TimestampBehavior;
 use yii\db\ActiveRecord;
 use yii\web\IdentityInterface;
+use lhs\Yii2SaveRelationsBehavior\SaveRelationsBehavior;
+use yii\db\ActiveQuery;
 
 /**
  * User model
@@ -21,6 +23,8 @@ use yii\web\IdentityInterface;
  * @property integer $created_at
  * @property integer $updated_at
  * @property string $password write-only password
+ *
+ * @property Network[] $networks
  */
 class User extends ActiveRecord implements IdentityInterface
 {
@@ -56,6 +60,18 @@ class User extends ActiveRecord implements IdentityInterface
     /**
      * {@new}
      */
+    public static function signupByNetwork($network,$identity) :self
+    {
+        $user = new User();
+        $user->created_at = time();
+        $user->status = self::STATUS_ACTIVE;
+        $user->generateAuthKey();
+        $user->networks = [Network::create($network,$identity)];
+        return $user;
+    }
+    /**
+     * {@new}
+     */
     public function is_Wait()
     {
         return $this->status === self::STATUS_WAIT;
@@ -70,6 +86,13 @@ class User extends ActiveRecord implements IdentityInterface
             throw new \DomainException('Password resetting is already requested');
         }
         $this->password_reset_token = Yii::$app->security->generateRandomString().'_'.time();
+    }
+    /**
+     * {@new}
+     */
+    public  function  getNetworks(): ActiveQuery
+    {
+        return$this->hasMany(Network::className(),['user_id'=>'id']);
     }
     /**
      * {@new}
@@ -103,6 +126,16 @@ class User extends ActiveRecord implements IdentityInterface
     {
         return [
             TimestampBehavior::className(),
+            [
+                'class' => SaveRelationsBehavior::className(),
+                'relations' => ['networks'],
+            ],
+        ];
+    }
+    public function transactions()
+    {
+        return [
+            self::SCENARIO_DEFAULT => self::OP_ALL,
         ];
     }
 

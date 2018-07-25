@@ -28,7 +28,29 @@ return [
                 'domain'=>$params['cookieDomain']
             ],
             'loginUrl' => ['auth/auth/login'],
+            //'baseAuthUrl' => ['auth/network/auth'],
 
+        ],
+        'authClientCollection' => [
+            'class' => 'yii\authclient\Collection',
+            'clients' => [
+                'google' => [
+                    'class' => 'yii\authclient\clients\Google',
+                    'clientId' => 'google_client_id',
+                    'clientSecret' => 'google_client_secret',
+                ],
+                'facebook' => [
+                    'class' => 'yii\authclient\clients\Facebook',
+                    'clientId' => 'facebook_client_id',
+                    'clientSecret' => 'facebook_client_secret',
+                ],
+                'vk' => [
+                    'class' => 'yii\authclient\clients\VKontakte',
+                    'clientId' => '6642513',
+                    'clientSecret' => 'unSu84gkIgYuY7UJGOmU',
+                ],
+                // etc.
+            ],
         ],
         'session' => [
             // this is the name of the session cookie used for login on the frontend
