@@ -1,4 +1,5 @@
 <?php
+
 namespace shop\services\manage\Shop;
 
 use shop\entities\Shop\Characteristic;
@@ -13,6 +14,7 @@ class CharacteristicManageService
     {
         $this->characteristics = $characteristics;
     }
+
     public function create(CharacteristicForm $form): Characteristic
     {
         $characteristic = Characteristic::create(
@@ -26,6 +28,7 @@ class CharacteristicManageService
         $this->characteristics->save($characteristic);
         return $characteristic;
     }
+
     public function edit($id, CharacteristicForm $form): void
     {
         $characteristic = $this->characteristics->get($id);
@@ -39,6 +42,7 @@ class CharacteristicManageService
         );
         $this->characteristics->save($characteristic);
     }
+
     public function remove($id): void
     {
         $characteristic = $this->characteristics->get($id);

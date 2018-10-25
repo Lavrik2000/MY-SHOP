@@ -1,4 +1,5 @@
 <?php
+
 namespace shop\forms\manage\User;
 
 use shop\entities\User\User;
@@ -9,6 +10,7 @@ class UserCreateForm extends Model
     public $username;
     public $email;
     public $password;
+
     public function rules(): array
     {
         return [

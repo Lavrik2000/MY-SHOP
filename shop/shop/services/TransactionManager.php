@@ -1,4 +1,5 @@
 <?php
+
 namespace shop\services;
 
 class TransactionManager

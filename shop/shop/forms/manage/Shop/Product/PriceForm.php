@@ -1,8 +1,11 @@
 <?php
+
 namespace shop\forms\manage\Shop\Product;
+
 use shop\entities\Shop\Product\Product;
 use shop\forms\manage\MetaForm;
 use yii\base\Model;
+
 /**
  * @property MetaForm $meta
  * @property CategoriesForm $categories
@@ -13,6 +16,7 @@ class PriceForm extends Model
 {
     public $old;
     public $new;
+
     public function __construct(Product $product = null, $config = [])
     {
         if ($product) {
@@ -21,6 +25,7 @@ class PriceForm extends Model
         }
         parent::__construct($config);
     }
+
     public function rules(): array
     {
         return [

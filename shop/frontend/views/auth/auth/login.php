@@ -39,7 +39,6 @@ $this->params['breadcrumbs'][] = $this->title;
             <?= yii\authclient\widgets\AuthChoice::widget([
                 'baseAuthUrl' => ['auth/network/auth']
             ]); ?>
-
         </div>
     </div>
 </div>

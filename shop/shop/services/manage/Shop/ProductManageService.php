@@ -8,6 +8,7 @@ use shop\entities\Shop\Tag;
 use shop\forms\manage\Shop\Product\CategoriesForm;
 use shop\forms\manage\Shop\Product\ModificationForm;
 use shop\forms\manage\Shop\Product\PhotosForm;
+use shop\forms\manage\Shop\Product\PriceForm;
 use shop\forms\manage\Shop\Product\ProductCreateForm;
 use shop\forms\manage\Shop\Product\ProductEditForm;
 use shop\repositories\Shop\BrandRepository;
@@ -49,6 +50,7 @@ class ProductManageService
             $category->id,
             $form->code,
             $form->name,
+            $form->description,
             new Meta(
                 $form->meta->title,
                 $form->meta->description,
@@ -94,17 +96,30 @@ class ProductManageService
     {
         $product = $this->products->get($id);
         $brand = $this->brands->get($form->brandId);
+        $category = $this->categories->get($form->categories->main);
+
+
 
         $product->edit(
             $brand->id,
             $form->code,
             $form->name,
+            $form->description,
             new Meta(
                 $form->meta->title,
                 $form->meta->description,
                 $form->meta->keywords
             )
         );
+
+        $product->changeMainCategory($category->id);
+
+        $product->revokeCategories();
+
+        foreach ($form->categories->others as $otherId) {
+            $category = $this->categories->get($otherId);
+            $product->assignCategory($category->id);
+        }
 
         foreach ($form->values as $value) {
             $product->setValue($value->id, $value->value);
@@ -114,6 +129,7 @@ class ProductManageService
 
         foreach ($form->tags->existing as $tagId) {
             $tag = $this->tags->get($tagId);
+            //var_dump($tag);exit;
             $product->assignTag($tag->id);
         }
 
@@ -129,17 +145,10 @@ class ProductManageService
         });
     }
 
-
-    public function changeCategories($id, CategoriesForm $form): void
+    public function changePrice($id, PriceForm $form): void
     {
         $product = $this->products->get($id);
-        $category = $this->categories->get($form->main);
-        $product->changeMainCategory($category->id);
-        $product->revokeCategories();
-        foreach ($form->others as $otherId) {
-            $category = $this->categories->get($otherId);
-            $product->assignCategory($category->id);
-        }
+        $product->setPrice($form->new, $form->old);
         $this->products->save($product);
     }
 

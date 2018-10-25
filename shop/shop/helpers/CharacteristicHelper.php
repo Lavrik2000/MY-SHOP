@@ -1,4 +1,5 @@
 <?php
+
 namespace shop\helpers;
 
 use shop\entities\Shop\Characteristic;
@@ -14,6 +15,7 @@ class CharacteristicHelper
             Characteristic::TYPE_FLOAT => 'Float number',
         ];
     }
+
     public static function typeName($type): string
     {
         return ArrayHelper::getValue(self::typeList(), $type);

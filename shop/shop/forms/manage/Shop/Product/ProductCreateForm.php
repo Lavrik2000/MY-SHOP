@@ -2,10 +2,12 @@
 
 namespace shop\forms\manage\Shop\Product;
 
+use shop\entities\Shop\Brand;
 use shop\entities\Shop\Characteristic;
 use shop\entities\Shop\Product\Product;
 use shop\forms\CompositeForm;
 use shop\forms\manage\MetaForm;
+use yii\helpers\ArrayHelper;
 
 /**
  * @property PriceForm $price
@@ -20,6 +22,7 @@ class ProductCreateForm extends CompositeForm
     public $brandId;
     public $code;
     public $name;
+    public $description;
 
     public function __construct($config = [])
     {
@@ -41,7 +44,13 @@ class ProductCreateForm extends CompositeForm
             [['code', 'name'], 'string', 'max' => 255],
             [['brandId'], 'integer'],
             [['code'], 'unique', 'targetClass' => Product::class],
+            ['description', 'string'],
         ];
+    }
+
+    public function brandsList(): array
+    {
+        return ArrayHelper::map(Brand::find()->orderBy('name')->asArray()->all(), 'id', 'name');
     }
 
     protected function internalForms(): array

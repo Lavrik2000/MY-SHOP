@@ -1,4 +1,5 @@
 <?php
+
 namespace shop\helpers;
 
 use shop\entities\User\User;
@@ -14,10 +15,12 @@ class UserHelper
             User::STATUS_ACTIVE => 'Active',
         ];
     }
+
     public static function statusName($status): string
     {
         return ArrayHelper::getValue(self::statusList(), $status);
     }
+
     public static function statusLabel($status): string
     {
         switch ($status) {
@@ -30,6 +33,7 @@ class UserHelper
             default:
                 $class = 'label label-default';
         }
+
         return Html::tag('span', ArrayHelper::getValue(self::statusList(), $status), [
             'class' => $class,
         ]);

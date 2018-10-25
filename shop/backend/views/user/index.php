@@ -1,13 +1,16 @@
 <?php
+
 use kartik\date\DatePicker;
 use shop\entities\User\User;
 use shop\helpers\UserHelper;
 use yii\grid\ActionColumn;
 use yii\helpers\Html;
 use yii\grid\GridView;
+
 /* @var $this yii\web\View */
 /* @var $searchModel backend\forms\UserSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
+
 $this->title = 'Users';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
@@ -31,7 +34,7 @@ $this->params['breadcrumbs'][] = $this->title;
                             'attribute' => 'date_from',
                             'attribute2' => 'date_to',
                             'type' => DatePicker::TYPE_RANGE,
-                            'separator' => ':',
+                            'separator' => '-',
                             'pluginOptions' => [
                                 'todayHighlight' => true,
                                 'autoclose'=>true,

@@ -1,6 +1,9 @@
 <?php
+
 namespace shop\entities\Shop;
+
 use yii\db\ActiveRecord;
+
 /**
  * @property integer $id
  * @property string $name
@@ -15,12 +18,14 @@ class Tag extends ActiveRecord
         $tag->slug = $slug;
         return $tag;
     }
+
     public function edit($name, $slug): void
     {
         $this->name = $name;
         $this->slug = $slug;
     }
-    public static function tableName()
+
+    public static function tableName(): string
     {
         return '{{%shop_tags}}';
     }

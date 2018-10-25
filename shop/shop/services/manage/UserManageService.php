@@ -1,10 +1,11 @@
 <?php
+
 namespace shop\services\manage;
 
 use shop\entities\User\User;
 use shop\forms\manage\User\UserCreateForm;
-use shop\repositories\UserRepository;
 use shop\forms\manage\User\UserEditForm;
+use shop\repositories\UserRepository;
 
 class UserManageService
 {
@@ -14,6 +15,7 @@ class UserManageService
     {
         $this->repository = $repository;
     }
+
     public function create(UserCreateForm $form): User
     {
         $user = User::create(
@@ -24,17 +26,17 @@ class UserManageService
         $this->repository->save($user);
         return $user;
     }
-    public function edit($id,UserEditForm $form): void
+
+    public function edit($id, UserEditForm $form): void
     {
-        $user=$this->repository->get($id);
-        $user ->edit(
+        $user = $this->repository->get($id);
+        $user->edit(
             $form->username,
-            $form->email,
-            $form->password
+            $form->email
         );
         $this->repository->save($user);
-
     }
+
     public function remove($id): void
     {
         $user = $this->repository->get($id);

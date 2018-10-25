@@ -1,19 +1,17 @@
 <?php
 
+use shop\helpers\UserHelper;
 use yii\helpers\Html;
 use yii\widgets\DetailView;
-use shop\helpers\UserHelper;
 
 /* @var $this yii\web\View */
-/* @var $model shop\entities\User\User */
+/* @var $model shop\entities\User */
 
 $this->title = $model->id;
 $this->params['breadcrumbs'][] = ['label' => 'Users', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="user-view">
-
-
 
     <p>
         <?= Html::a('Update', ['update', 'id' => $model->id], ['class' => 'btn btn-primary']) ?>
@@ -25,6 +23,7 @@ $this->params['breadcrumbs'][] = $this->title;
             ],
         ]) ?>
     </p>
+
     <div class="box">
         <div class="box-body">
             <?= DetailView::widget([

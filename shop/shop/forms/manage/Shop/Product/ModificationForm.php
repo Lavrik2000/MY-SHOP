@@ -1,12 +1,16 @@
 <?php
+
 namespace shop\forms\manage\Shop\Product;
+
 use shop\entities\Shop\Product\Modification;
 use yii\base\Model;
+
 class ModificationForm extends Model
 {
     public $code;
     public $name;
     public $price;
+
     public function __construct(Modification $modification = null, $config = [])
     {
         if ($modification) {
@@ -16,6 +20,7 @@ class ModificationForm extends Model
         }
         parent::__construct($config);
     }
+
     public function rules(): array
     {
         return [

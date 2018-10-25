@@ -7,8 +7,10 @@ use shop\entities\behaviors\MetaBehavior;
 use shop\entities\Meta;
 use shop\entities\Shop\Brand;
 use shop\entities\Shop\Category;
+use shop\entities\Shop\Tag;
 use yii\db\ActiveQuery;
 use yii\db\ActiveRecord;
+use yii\db\Exception;
 use yii\web\UploadedFile;
 
 /**
@@ -16,34 +18,40 @@ use yii\web\UploadedFile;
  * @property integer $created_at
  * @property string $code
  * @property string $name
+ * @property string $description
  * @property integer $category_id
  * @property integer $brand_id
  * @property integer $price_old
  * @property integer $price_new
  * @property integer $rating
+ * @property integer $main_photo_id
  *
  * @property Meta $meta
  * @property Brand $brand
  * @property Category $category
  * @property CategoryAssignment[] $categoryAssignments
+ * @property Category[] $categories
  * @property TagAssignment[] $tagAssignments
+ * @property Tag[] $tags
  * @property RelatedAssignment[] $relatedAssignments
  * @property Modification[] $modifications
  * @property Value[] $values
  * @property Photo[] $photos
+ * @property Photo $mainPhoto
  * @property Review[] $reviews
  */
 class Product extends ActiveRecord
 {
     public $meta;
 
-    public static function create($brandId, $categoryId, $code, $name, Meta $meta): self
+    public static function create($brandId, $categoryId, $code, $name, $description, Meta $meta): self
     {
         $product = new static();
         $product->brand_id = $brandId;
         $product->category_id = $categoryId;
         $product->code = $code;
         $product->name = $name;
+        $product->description = $description;
         $product->meta = $meta;
         $product->created_at = time();
         return $product;
@@ -55,11 +63,12 @@ class Product extends ActiveRecord
         $this->price_old = $old;
     }
 
-    public function edit($brandId, $code, $name, Meta $meta): void
+    public function edit($brandId, $code, $name, $description, Meta $meta): void
     {
         $this->brand_id = $brandId;
         $this->code = $code;
         $this->name = $name;
+        $this->description = $description;
         $this->meta = $meta;
     }
 
@@ -272,6 +281,7 @@ class Product extends ActiveRecord
             $photo->setSort($i);
         }
         $this->photos = $photos;
+        $this->populateRelation('mainPhoto', reset($photos));
     }
 
     // Related products
@@ -390,9 +400,19 @@ class Product extends ActiveRecord
         return $this->hasMany(CategoryAssignment::class, ['product_id' => 'id']);
     }
 
+    public function getCategories(): ActiveQuery
+    {
+        return $this->hasMany(Category::class, ['id' => 'category_id'])->via('categoryAssignments');
+    }
+
     public function getTagAssignments(): ActiveQuery
     {
         return $this->hasMany(TagAssignment::class, ['product_id' => 'id']);
+    }
+
+    public function getTags(): ActiveQuery
+    {
+        return $this->hasMany(Tag::class, ['id' => 'tag_id'])->via('tagAssignments');
     }
 
     public function getModifications(): ActiveQuery
@@ -410,9 +430,19 @@ class Product extends ActiveRecord
         return $this->hasMany(Photo::class, ['product_id' => 'id'])->orderBy('sort');
     }
 
+    public function getMainPhoto(): ActiveQuery
+    {
+        return $this->hasOne(Photo::class, ['id' => 'main_photo_id']);
+    }
+
     public function getRelatedAssignments(): ActiveQuery
     {
         return $this->hasMany(RelatedAssignment::class, ['product_id' => 'id']);
+    }
+
+    public function getRelateds(): ActiveQuery
+    {
+        return $this->hasMany(Product::class, ['id' => 'related_id'])->via('relatedAssignments');
     }
 
     public function getReviews(): ActiveQuery
@@ -443,5 +473,25 @@ class Product extends ActiveRecord
         return [
             self::SCENARIO_DEFAULT => self::OP_ALL,
         ];
+    }
+
+    public function beforeDelete(): bool
+    {
+        if (parent::beforeDelete()) {
+            foreach ($this->photos as $photo) {
+                $photo->delete();
+            }
+            return true;
+        }
+        return false;
+    }
+
+    public function afterSave($insert, $changedAttributes): void
+    {
+        $related = $this->getRelatedRecords();
+        if (array_key_exists('mainPhoto', $related)) {
+            $this->updateAttributes(['main_photo_id' => $related['mainPhoto'] ? $related['mainPhoto']->id : null]);
+        }
+        parent::afterSave($insert, $changedAttributes);
     }
 }

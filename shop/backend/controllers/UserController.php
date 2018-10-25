@@ -26,7 +26,7 @@ class UserController extends Controller
     }
 
     /**
-     * {@inheritdoc}
+     * @inheritdoc
      */
     public function behaviors()
     {
@@ -59,7 +59,6 @@ class UserController extends Controller
      * Displays a single User model.
      * @param integer $id
      * @return mixed
-     * @throws NotFoundHttpException if the model cannot be found
      */
     public function actionView($id)
     {
@@ -76,7 +75,6 @@ class UserController extends Controller
     public function actionCreate()
     {
         $form = new UserCreateForm();
-
         if ($form->load(Yii::$app->request->post()) && $form->validate()) {
             try {
                 $user = $this->service->create($form);
@@ -86,7 +84,6 @@ class UserController extends Controller
                 Yii::$app->session->setFlash('error', $e->getMessage());
             }
         }
-
         return $this->render('create', [
             'model' => $form,
         ]);
@@ -97,13 +94,12 @@ class UserController extends Controller
      * If update is successful, the browser will be redirected to the 'view' page.
      * @param integer $id
      * @return mixed
-     * @throws NotFoundHttpException if the model cannot be found
      */
     public function actionUpdate($id)
     {
         $user = $this->findModel($id);
-        $form=new UserEditForm($user);
 
+        $form = new UserEditForm($user);
         if ($form->load(Yii::$app->request->post()) && $form->validate()) {
             try {
                 $this->service->edit($user->id, $form);
@@ -113,12 +109,10 @@ class UserController extends Controller
                 Yii::$app->session->setFlash('error', $e->getMessage());
             }
         }
-
         return $this->render('update', [
             'model' => $form,
             'user' => $user,
         ]);
-
     }
 
     /**
@@ -126,12 +120,10 @@ class UserController extends Controller
      * If deletion is successful, the browser will be redirected to the 'index' page.
      * @param integer $id
      * @return mixed
-     * @throws NotFoundHttpException if the model cannot be found
      */
     public function actionDelete($id)
     {
         $this->service->remove($id);
-
         return $this->redirect(['index']);
     }
 
@@ -146,8 +138,8 @@ class UserController extends Controller
     {
         if (($model = User::findOne($id)) !== null) {
             return $model;
+        } else {
+            throw new NotFoundHttpException('The requested page does not exist.');
         }
-
-        throw new NotFoundHttpException('The requested page does not exist.');
     }
 }

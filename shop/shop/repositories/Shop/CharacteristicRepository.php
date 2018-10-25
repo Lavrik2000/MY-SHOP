@@ -1,4 +1,5 @@
 <?php
+
 namespace shop\repositories\Shop;
 
 use shop\entities\Shop\Characteristic;
@@ -13,12 +14,14 @@ class CharacteristicRepository
         }
         return $characteristic;
     }
+
     public function save(Characteristic $characteristic): void
     {
         if (!$characteristic->save()) {
             throw new \RuntimeException('Saving error.');
         }
     }
+
     public function remove(Characteristic $characteristic): void
     {
         if (!$characteristic->delete()) {

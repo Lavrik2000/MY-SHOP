@@ -26,7 +26,7 @@ class TagForm extends Model
     public function rules(): array
     {
         return [
-            [['name', 'slug'], 'required'],// if you use Inflector than to have delete 'slug' from here
+            [['name', 'slug'], 'required'],
             [['name', 'slug'], 'string', 'max' => 255],
             ['slug', SlugValidator::class],
             [['name', 'slug'], 'unique', 'targetClass' => Tag::class, 'filter' => $this->_tag ? ['<>', 'id', $this->_tag->id] : null]

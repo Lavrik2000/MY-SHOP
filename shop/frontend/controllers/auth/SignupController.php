@@ -9,19 +9,17 @@ use shop\forms\auth\SignupForm;
 
 class SignupController extends Controller
 {
+    public $layout = 'cabinet';
     private $service;
 
     public function __construct($id, $module, SignupService $service, $config = [])
     {
         parent::__construct($id, $module, $config);
         $this->service = $service;
-
     }
 
     public function behaviors(): array
     {
-
-
         return [
             'access' => [
                 'class' => AccessControl::className(),
@@ -42,7 +40,6 @@ class SignupController extends Controller
      */
     public function actionRequest()
     {
-
         $form = new SignupForm();
         if ($form->load(Yii::$app->request->post()) && $form->validate()) {
             try {

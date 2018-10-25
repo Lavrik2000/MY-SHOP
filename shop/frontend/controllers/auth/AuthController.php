@@ -1,17 +1,22 @@
 <?php
 namespace frontend\controllers\auth;
+
 use shop\services\auth\AuthService;
 use Yii;
 use yii\web\Controller;
 use shop\forms\auth\LoginForm;
+
 class AuthController extends Controller
 {
+    public $layout = 'cabinet';
     private $service;
+
     public function __construct($id, $module, AuthService $service, $config = [])
     {
         parent::__construct($id, $module, $config);
         $this->service = $service;
     }
+
     /**
      * @return mixed
      */
@@ -20,6 +25,7 @@ class AuthController extends Controller
         if (!Yii::$app->user->isGuest) {
             return $this->goHome();
         }
+
         $form = new LoginForm();
         if ($form->load(Yii::$app->request->post()) && $form->validate()) {
             try {
@@ -31,16 +37,19 @@ class AuthController extends Controller
                 Yii::$app->session->setFlash('error', $e->getMessage());
             }
         }
+
         return $this->render('login', [
             'model' => $form,
         ]);
     }
+
     /**
      * @return mixed
      */
     public function actionLogout()
     {
         Yii::$app->user->logout();
+
         return $this->goHome();
     }
 }

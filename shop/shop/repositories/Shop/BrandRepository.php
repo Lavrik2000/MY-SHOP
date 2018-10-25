@@ -1,8 +1,10 @@
 <?php
+
 namespace shop\repositories\Shop;
 
 use shop\entities\Shop\Brand;
 use shop\repositories\NotFoundException;
+
 class BrandRepository
 {
     public function get($id): Brand
@@ -12,12 +14,14 @@ class BrandRepository
         }
         return $brand;
     }
+
     public function save(Brand $brand): void
     {
         if (!$brand->save()) {
             throw new \RuntimeException('Saving error.');
         }
     }
+
     public function remove(Brand $brand): void
     {
         if (!$brand->delete()) {

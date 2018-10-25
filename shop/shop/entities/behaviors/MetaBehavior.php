@@ -1,15 +1,19 @@
 <?php
+
 namespace shop\entities\behaviors;
+
 use shop\entities\Meta;
 use yii\base\Behavior;
 use yii\base\Event;
 use yii\db\ActiveRecord;
 use yii\helpers\ArrayHelper;
 use yii\helpers\Json;
+
 class MetaBehavior extends Behavior
 {
     public $attribute = 'meta';
     public $jsonAttribute = 'meta_json';
+
     public function events(): array
     {
         return [
@@ -18,6 +22,7 @@ class MetaBehavior extends Behavior
             ActiveRecord::EVENT_BEFORE_UPDATE => 'onBeforeSave',
         ];
     }
+
     public function onAfterFind(Event $event): void
     {
         $model = $event->sender;
@@ -28,6 +33,7 @@ class MetaBehavior extends Behavior
             ArrayHelper::getValue($meta, 'keywords')
         );
     }
+
     public function onBeforeSave(Event $event): void
     {
         $model = $event->sender;

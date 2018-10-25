@@ -1,19 +1,16 @@
 <?php
 
-use yii\bootstrap\ActiveForm;
-use yii\helpers\Html;
-
-
 /* @var $this yii\web\View */
 /* @var $model shop\forms\manage\User\UserCreateForm */
+
+use yii\bootstrap\ActiveForm;
+use yii\helpers\Html;
 
 $this->title = 'Create User';
 $this->params['breadcrumbs'][] = ['label' => 'Users', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="user-create">
-
-
 
     <?php $form = ActiveForm::begin(); ?>
 
@@ -26,4 +23,5 @@ $this->params['breadcrumbs'][] = $this->title;
     </div>
 
     <?php ActiveForm::end(); ?>
+
 </div>

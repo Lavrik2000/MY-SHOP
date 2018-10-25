@@ -1,12 +1,16 @@
 <?php
+
 namespace shop\forms\manage;
+
 use shop\entities\Meta;
 use yii\base\Model;
+
 class MetaForm extends Model
 {
     public $title;
     public $description;
     public $keywords;
+
     public function __construct(Meta $meta = null, $config = [])
     {
         if ($meta) {
@@ -16,6 +20,7 @@ class MetaForm extends Model
         }
         parent::__construct($config);
     }
+
     public function rules(): array
     {
         return [

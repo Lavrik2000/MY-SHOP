@@ -1,4 +1,5 @@
 <?php
+
 namespace shop\forms;
 
 use yii\base\Model;
@@ -25,6 +26,7 @@ abstract class CompositeForm extends Model
         }
         return $success;
     }
+
     public function validate($attributeNames = null, $clearErrors = true): bool
     {
         $parentNames = $attributeNames !== null ? array_filter((array)$attributeNames, 'is_string') : null;
@@ -39,6 +41,7 @@ abstract class CompositeForm extends Model
         }
         return $success;
     }
+
     public function __get($name)
     {
         if (isset($this->forms[$name])) {
@@ -46,6 +49,7 @@ abstract class CompositeForm extends Model
         }
         return parent::__get($name);
     }
+
     public function __set($name, $value)
     {
         if (in_array($name, $this->internalForms(), true)) {
@@ -54,6 +58,7 @@ abstract class CompositeForm extends Model
             parent::__set($name, $value);
         }
     }
+
     public function __isset($name)
     {
         return isset($this->forms[$name]) || parent::__isset($name);

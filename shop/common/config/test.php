@@ -1,4 +1,6 @@
 <?php
+use yii\helpers\ReplaceArrayValue;
+
 return [
     'id' => 'app-common-tests',
     'basePath' => dirname(__DIR__),
@@ -6,11 +8,7 @@ return [
         'user' => [
             'class' => 'yii\web\User',
             'identityClass' => 'shop\entities\User\User',
-
+            'identityCookie' => new ReplaceArrayValue(['name' => '_identity', 'httpOnly' => true]),
         ],
-        'request' => [
-            'cookieValidationKey' => 'test',
-        ],
-
     ],
 ];

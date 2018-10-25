@@ -1,4 +1,5 @@
 <?php
+
 namespace shop\repositories\Shop;
 
 use shop\entities\Shop\Category;
@@ -13,12 +14,14 @@ class CategoryRepository
         }
         return $category;
     }
+
     public function save(Category $category): void
     {
         if (!$category->save()) {
             throw new \RuntimeException('Saving error.');
         }
     }
+
     public function remove(Category $category): void
     {
         if (!$category->delete()) {

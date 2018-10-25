@@ -5,14 +5,19 @@ $params = array_merge(
     require __DIR__ . '/params.php',
     require __DIR__ . '/params-local.php'
 );
-
 return [
     'id' => 'app-frontend',
     'basePath' => dirname(__DIR__),
     'bootstrap' => [
         'log',
-        'common\bootstrap\SetUp'
+        'common\bootstrap\SetUp',
+        'frontend\bootstrap\SetUp',
     ],
+    'aliases' => [
+        '@staticRoot' => $params['staticPath'],
+        '@static'   => $params['staticHostInfo'],
+    ],
+    'layout' => 'blank',
     'controllerNamespace' => 'frontend\controllers',
     'components' => [
         'request' => [
@@ -29,7 +34,6 @@ return [
             ],
             'loginUrl' => ['auth/auth/login'],
             //'baseAuthUrl' => ['auth/network/auth'],
-
         ],
         'authClientCollection' => [
             'class' => 'yii\authclient\Collection',
@@ -58,7 +62,6 @@ return [
             'cookieParams'=>[
                 'domain'=>$params['cookieDomain'],
                 'httpOnly' => true
-
             ]
         ],
         'log' => [
@@ -77,19 +80,17 @@ return [
             'class' => 'yii\filters\AccessControl',
             'exept'=>['site/login','site/error'],
             'rules' => [
-                    [
+                [
                     'allow' => true,
                     'roles' => ['@'],
-                    ],
+                ],
             ],
         ],
-
         'backendUrlManager'=> require __DIR__ . '/../../backend/config/urlManager.php',
         'frontendUrlManager' => require __DIR__ . '/urlManager.php',
         'urlManager' => function (){
             return Yii::$app->get('frontendUrlManager');
         },
-
     ],
     'params' => $params,
 ];
